@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../App.css'
+import { Link as ScrollLink } from 'react-scroll';
 function Footer() {
     return (
         <>
@@ -70,12 +71,17 @@ function Footer() {
                             </div>
                         </div>
                         <div className='col-lg-3'>
-                        <div className='mt-4'>
-                                <img src='Assets/img/google1.png' alt='ggole' className=' me-2 f-img' style={{width:"40%"}}></img>
-                                <img src='Assets/img/apple.png' alt='ggole' className=' f-img ' style={{width:"39%"}}></img>
+                            <div className='mt-4'>
+                                <img src='Assets/img/google1.png' alt='ggole' className=' me-2 f-img' style={{ width: "40%" }}></img>
+                                <img src='Assets/img/apple.png' alt='ggole' className=' f-img ' style={{ width: "39%" }}></img>
 
                             </div>
                         </div>
+                    </div>
+                </div>
+                <div className='float-end me-4 position-set '>
+                    <div>
+                        <span className='ic-set'><ScrollLink to="home" smooth={true} duration={50}><i className="fa-solid fa-arrow-up"></i></ScrollLink></span>
                     </div>
                 </div>
             </footer>

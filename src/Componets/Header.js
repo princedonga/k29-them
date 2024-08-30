@@ -3,8 +3,8 @@ import { Link as ScrollLink } from 'react-scroll';
 import '../App.css'
 function Header() {
     return (
-        <div className=' position-sticky top-0 z-3 bg-white'>
-            <section className=''>
+        <div className=' position-sticky top-0 z-3 bg-white' >
+            <section className='box-shdow p-0'>
                 <div className='container-fluid'>
                     <div className='row'>
                         <div className='col-lg-4 col-md-6 col-sm-6 col-6'>

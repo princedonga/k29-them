@@ -1,18 +1,45 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import Aos from 'aos';
 import 'aos/dist/aos.css'
 import { useEffect } from 'react';
 import Card from '../Componets/Card';
 import FoodCard from '../Componets/FoodCard';
+import { useState } from 'react';
+
 function Home() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        time: '',
+        date: '',
+        guest: ''
+    });
+
+    const [error, setError] = useState('');
+
     useEffect(() => {
         Aos.init();
     }, [])
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+
+        if (!formData.name || !formData.email || !formData.phone || !formData.time || !formData.date || !formData.guest) {
+            setError('All fields are required.');
+            return;
+        }
+        setError('');
+    };
     return (
         <div>
             <section className='mt-5' id='home'>
-                <div className='container m-set'>
+                <div className='container m-set' >
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
                             <div className='m-set1'>
@@ -22,13 +49,15 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-left" data-aos-duration="2000">
+                            <div data-aos="fade-left" data-aos-duration="3000">
                                 <img src='Assets/img/product_4.2.jpg' alt='pizza-img' className='pizza-img-set float-lg-end d-block mx-auto mt-lg-0 mt-5'></img>
+
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
+
             <section className='mt-5' data-aos="fade-up" data-aos-duration="1200">
                 <div className='container m-set'>
                     <div className='row'>
@@ -53,6 +82,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+
             {/* <section className='mt-5'>
                 <div className='container position-reletive'>
                     <div className='row '>
@@ -267,42 +297,89 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-7 col-md-6 col-sm-12 col-12'>
-                            <div className='m-set1' data-aos="fade-up"
-                                data-aos-easing="ease-out-cubic"
-                                data-aos-duration="2000"
-                                data-aos-anchor-placement="center-center">
-                                <table>
-                                    <tr className=''>
-                                        <td>
-                                            <input type='text ' placeholder='Name' className='form-control w-100 mb-4'></input>
-                                        </td>
-                                        <td>
-                                            <input type='email ' placeholder='email' className='form-control w-100 mb-4 ms-3'></input>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type='tel ' placeholder='Phone' className='form-control w-100  mb-4'></input>
-                                        </td>
-                                        <td>
-                                            <input type='text ' placeholder='Time' className='form-control w-100 mb-4 ms-3'></input>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <input type='text ' placeholder='Date' className='form-control w-100'></input>
-                                        </td>
-                                        <td>
-                                            <input type='text ' placeholder='Guest' className='form-control w-100 ms-3'></input>
-                                        </td>
-                                    </tr>
-                                </table>
-                                <Link to="" className='btn btn-danger px-5 mt-4'>Book Now</Link>
-                            </div>
+                            <form onSubmit={handleSubmit}>
+                                <div className='m-set1' data-aos="fade-up"
+                                    data-aos-easing="ease-out-cubic"
+                                    data-aos-duration="2000"
+                                    data-aos-anchor-placement="center-center">
+                                    <table>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        type='text'
+                                                        placeholder='Name'
+                                                        className='form-control w-100 mb-4'
+                                                        name='name'
+                                                        value={formData.name}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        type='email'
+                                                        placeholder='Email'
+                                                        className='form-control w-100 mb-4 ms-3'
+                                                        name='email'
+                                                        value={formData.email}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        type='tel'
+                                                        placeholder='Phone'
+                                                        className='form-control w-100  mb-4'
+                                                        name='phone'
+                                                        value={formData.phone}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        type='text'
+                                                        placeholder='Time'
+                                                        className='form-control w-100 mb-4 ms-3'
+                                                        name='time'
+                                                        value={formData.time}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input
+                                                        type='text'
+                                                        placeholder='Date'
+                                                        className='form-control w-100'
+                                                        name='date'
+                                                        value={formData.date}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                                <td>
+                                                    <input
+                                                        type='text'
+                                                        placeholder='Guest'
+                                                        className='form-control w-100 ms-3'
+                                                        name='guest'
+                                                        value={formData.guest}
+                                                        onChange={handleInputChange}
+                                                    />
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    {error && <p className='text-danger mt-3'>{error}</p>}
+                                    <button type='submit' className='btn btn-danger px-5 mt-4'>Book Now</button>
+                                </div>
+                            </form>
                         </div>
                         <div className='col-lg-5 col-md-6 col-sm-12 col-12'>
                             <div data-aos="zoom-out-down" data-aos-duration="3000" >
-                                <img src='Assets/img/product_4.2.jpg' alt='book tabel' className='img-fluid  float-end '></img>
+                                <img src='Assets/img/product_4.2.jpg' alt='book tabel' className='img-fluid img-m float-end '></img>
                             </div>
                         </div>
                     </div>
@@ -318,7 +395,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div style={{overflow:"hidden"}}>
+                            <div style={{ overflow: "hidden" }}>
                                 <img src='Assets/img/blog.webp' alt='blog' className='w-100 rounded mt-3 scale'></img>
                                 <h5 className='mt-2 undreline1'>November 22,23</h5>
                                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500</p>
