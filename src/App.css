@@ -1,6 +1,11 @@
 html {
   scroll-behavior: smooth;
 }
+*{
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+}
+
 
 .logo {
   width: 30%;
@@ -97,17 +102,17 @@ html {
   font-size: 19px;
 }
 
-.offcavas-menu {
+.offcanvas-menu {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.offcavas-menu li {
+.offcanvas-menu li {
   margin-bottom: 10px;
 }
 
-.offcavas-menu li a {
+.offcanvas-menu li a {
   text-decoration: none;
   color: #000;
   font-size: 20px;
@@ -210,7 +215,11 @@ html {
   .offcanvas {
     width: 30% !important;
   }
+  .m-input{
+    width: 30% !important;
+  }
 }
+
 
 
 @media(max-width:768px) {
@@ -243,6 +252,9 @@ html {
   .logo {
     margin-top: -8px !important;
     width: 37%;
+  }
+  .m-input{
+    width: 40% !important;
   }
 }
 
@@ -293,6 +305,9 @@ html {
     display: block;
     margin: auto;
   }
+  .m-input{
+    width: 60% !important;
+  }
 }
 
 @media(max-width:420px) {
@@ -309,6 +324,9 @@ html {
     width: 83% !important;
     margin-top: 20px !important;
     margin-right: 40px;
+  }
+  .m-input{
+    width: 70% !important;
   }
 }
 
@@ -335,10 +353,14 @@ html {
   .col-set {
     width: 100% !important;
   }
+  .m-input{
+    width: 70% !important;
+  }
 }
 
-.box-shdow {
+.box-shadow {
   box-shadow: 0px 1px 7px #ccc;
+  padding: 0px 10px !important;
 }
 
 .ic-set {

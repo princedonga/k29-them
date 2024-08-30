@@ -81,7 +81,7 @@ function Footer() {
                 </div>
                 <div className='float-end me-4 position-set '>
                     <div>
-                        <span className='ic-set'><ScrollLink to="home" smooth={true} duration={50}><i className="fa-solid fa-arrow-up"></i></ScrollLink></span>
+                        <ScrollLink to="home" smooth={true} duration={50} className='ic-set'><i className="fa-solid fa-arrow-up"></i></ScrollLink>
                     </div>
                 </div>
             </footer>
