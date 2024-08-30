@@ -1,7 +1,8 @@
 html {
   scroll-behavior: smooth;
 }
-*{
+
+* {
   font-family: "Poppins", sans-serif;
   font-style: normal;
 }
@@ -10,10 +11,12 @@ html {
   from {
     transform: translateY(-90%);
   }
+
   to {
     transform: translateY(0);
   }
 }
+
 .page-header.is-sticky {
   position: fixed;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
@@ -233,7 +236,8 @@ html {
   .offcanvas {
     width: 30% !important;
   }
-  .m-input{
+
+  .m-input {
     width: 30% !important;
   }
 }
@@ -271,7 +275,8 @@ html {
     margin-top: -8px !important;
     width: 37%;
   }
-  .m-input{
+
+  .m-input {
     width: 40% !important;
   }
 }
@@ -323,7 +328,8 @@ html {
     display: block;
     margin: auto;
   }
-  .m-input{
+
+  .m-input {
     width: 60% !important;
   }
 }
@@ -343,7 +349,8 @@ html {
     margin-top: 20px !important;
     margin-right: 40px;
   }
-  .m-input{
+
+  .m-input {
     width: 70% !important;
   }
 }
@@ -371,7 +378,8 @@ html {
   .col-set {
     width: 100% !important;
   }
-  .m-input{
+
+  .m-input {
     width: 70% !important;
   }
 }
