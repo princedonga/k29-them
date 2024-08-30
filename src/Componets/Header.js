@@ -27,9 +27,9 @@ function Header() {
     return (
         <div className={`page-header ${isSticky ? 'is-sticky' : ''}`}>
             <section>
-                <div className='container-fluid'>
+                <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-4 col-md-6 col-sm-6 col-6'>
+                        <div className='col-lg-3 col-md-6 col-sm-6 col-6'>
                             <div>
                                 <img src='Assets/img/logo1.png' alt='logo1' className='logo mt-sm-3 mt-lg-0'></img>
                             </div>
@@ -43,7 +43,7 @@ function Header() {
                                 <li><ScrollLink to="">Contact</ScrollLink></li>
                             </ul>
                         </div>
-                        <div className='col-lg-2 col-md-6 col-sm-6 col-6'>
+                        <div className='col-lg-3 col-md-6 col-sm-6 col-6'>
                             <div className='mt-5 float-end d-flex align-items-center'>
                                 <i
                                     className="fa-solid fa-magnifying-glass fs-5"
