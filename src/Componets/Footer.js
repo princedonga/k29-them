@@ -47,10 +47,10 @@ function Footer() {
                         <div className='col-lg-3 col-md-6 col-sm-6 col-12'>
                             <h5>SOCIAL MEDIA</h5>
                             <div className='mt-3'>
-                                <span><i className="fa-brands fa-facebook fs-2 me-3"></i></span>
-                                <span><i className="fa-brands fa-pinterest fs-2 me-3"></i></span>
-                                <span><i className="fa-brands fa-twitter fs-2 me-3"></i></span>
-                                <span><i className="fa-brands fa-instagram fs-2 me-2"></i></span>
+                                <img src='Assets/img/facebook.png' alt='facebook' className='me-2'></img>
+                                <img src='Assets/img/instagram.png' alt='facebook' className='me-2'></img>
+                                <img src='Assets/img/social.png' alt='facebook' className='me-2'></img>
+                                <img src='Assets/img/twitter.png' alt='facebook'></img>
                             </div>
                             <h6 className='mt-3'>Singup and Get Offers and Cuopan codes</h6>
                             <button className='btn btn-danger px-4 mt-3 py-1'>Sing Up</button>
@@ -71,9 +71,9 @@ function Footer() {
                             </div>
                         </div>
                         <div className='col-lg-3'>
-                            <div className='mt-4'>
-                                <img src='Assets/img/google1.png' alt='ggole' className=' me-2 f-img' style={{ width: "40%" }}></img>
-                                <img src='Assets/img/apple.png' alt='ggole' className=' f-img ' style={{ width: "39%" }}></img>
+                            <div className='mt-4 ms-2'>
+                                <img src='Assets/img/google-play.png' alt='ggole' className=' me-2 f-img' style={{ width: "13%" }}></img>
+                                <img src='Assets/img/app-store.png' alt='ggole' className=' f-img ' style={{ width: "13%" }}></img>
 
                             </div>
                         </div>

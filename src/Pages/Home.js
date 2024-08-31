@@ -50,7 +50,7 @@ function Home() {
             <section id='home'>
 
             </section>
-            <section className='mt-5' >
+            <section className='mt-0 pt-5' >
                 <div className='container m-set'>
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
@@ -66,7 +66,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-left" data-aos-duration="3000">
+                            <div data-aos="fade-left" data-aos-duration="3000" className='mt-3'>
                                 <img src='Assets/img/product_4.2.jpg' alt='pizza-img' className='pizza-img-set float-lg-end d-block mx-auto mt-lg-0 mt-5'></img>
                             </div>
                         </div>

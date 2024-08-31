@@ -32,6 +32,14 @@ html {
   width: 53%;
   margin-top: -29px !important;
 }
+.search-bar {
+  position: absolute;
+  top: -74px; /* Position it directly below the parent container */
+  right: 183px; /* Align it to the right edge of the parent container */
+  z-index: 1000; /* Ensure it appears above other elements */
+  width: 20% !important;
+}
+
 
 .menu {
   list-style: none;
