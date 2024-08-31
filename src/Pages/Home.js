@@ -77,12 +77,12 @@ function Home() {
             <section className='mt-5' data-aos="fade-up" data-aos-duration="1200">
                 <div className='container m-set'>
                     <div className='row'>
-                        <div className='col-lg-4 col-md-4 col-sm-12 col-12'>
-                            <div>
-                                <img src='Assets/img/pizza.jpeg' alt='right-pizza-img' className='d-block mx-auto'></img>
+                        <div className='col-lg-3 col-md-3 col-sm-12 col-12'>
+                            <div >
+                                <img src='Assets/img/pizza.jpeg' alt='right-pizza-img'className=' d-block mx-auto' ></img>
                             </div>
                         </div>
-                        <div className='col-lg-8 col-md-9 col-sm-12 col-12'>
+                        <div className='col-lg-6 col-md-3 col-sm-12 col-12'>
                             <div className='m-set1'>
                                 <h2>Daily fresh And <br />always tasty</h2>
                                 <p>
@@ -90,6 +90,11 @@ function Home() {
                                     text ever since the 1500s, when an unknown printer took a galley<br />
                                     of type and scrambled it to make a type specimen book.
                                 </p>
+                            </div>
+                        </div>
+                        <div className='col-lg-3 col-md-3 col-sm-12 col-12'>
+                            <div>
+                                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfajagZzkr-SlOTWRvYslgrxQiAjDCWvVR_w&s' className='d-block mx-auto' alt='garlic'></img>
                             </div>
                         </div>
                     </div>

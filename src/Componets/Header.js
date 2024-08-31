@@ -25,7 +25,7 @@ function Header() {
             <section>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+                        <div className='col-lg-3 col-md-6 col-sm-6 col-4'>
                             <div>
                                 <img src='Assets/img/logo1.png' alt='logo1' className='logo mt-sm-3 mt-lg-0'></img>
                             </div>
@@ -39,12 +39,12 @@ function Header() {
                                 <li><ScrollLink to="">Contact</ScrollLink></li>
                             </ul>
                         </div>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-6'>
+                        <div className='col-lg-3 col-md-6 col-sm-6 col-8'>
                             <div className='  float-end d-flex align-items-center ' style={{ marginTop: "37px" }}>
                                 <div class="input-group ">
-                                    <input type="text" class="form-control" placeholder="Search" data-bs-toggle="modal" data-bs-target="#exampleModal" />
+                                    <input type="text" class="form-control" placeholder="Search"  />
                                     <span class="input-group-text" id="basic-addon2"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    {/* <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog  modal-dialog-centered">
                                             <div class="modal-content">
                                                 <div class="modal-header">
@@ -60,7 +60,7 @@ function Header() {
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                                 <i className="fa-solid fa-cart-shopping ms-3 fs-5 me-2" style={{ cursor: "pointer" }}></i>
                                 <i

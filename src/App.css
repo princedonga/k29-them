@@ -20,7 +20,7 @@ html {
 .page-header.is-sticky {
   position: fixed;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
-  /* padding: 8px 0; */
+ 
   background-color: #fff;
   animation: slideDown 0.35s ease-out;
   width: 100%;
@@ -310,8 +310,8 @@ html {
 
 @media(max-width:576px) {
   .logo {
-    width: 65% !important;
-    margin-top: -28px !important;
+    width: 60% !important;
+    margin-top: -17px !important;
   }
 
   .card {
@@ -363,8 +363,8 @@ html {
 
 @media(max-width:420px) {
   .logo {
-    margin-top: -10px !important;
-    width: 65% !important;
+    margin-top: -23px !important;
+    width: 82% !important;
   }
 
   .col-set {
