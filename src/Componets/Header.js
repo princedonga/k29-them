@@ -25,7 +25,7 @@ function Header() {
             <section>
                 <div className='container'>
                     <div className='row'>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-4'>
+                        <div className='col-lg-3 col-md-6 col-sm-4 col-4'>
                             <div>
                                 <img src='Assets/img/logo1.png' alt='logo1' className='logo mt-sm-3 mt-lg-0'></img>
                             </div>
@@ -39,7 +39,7 @@ function Header() {
                                 <li><ScrollLink to="">Contact</ScrollLink></li>
                             </ul>
                         </div>
-                        <div className='col-lg-3 col-md-6 col-sm-6 col-8'>
+                        <div className='col-lg-3 col-md-6 col-sm-8 col-8'>
                             <div className='  float-end d-flex align-items-center ' style={{ marginTop: "37px" }}>
                                 <div class="input-group ">
                                     <input type="text" class="form-control" placeholder="Search"  />

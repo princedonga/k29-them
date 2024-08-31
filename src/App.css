@@ -20,7 +20,6 @@ html {
 .page-header.is-sticky {
   position: fixed;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
- 
   background-color: #fff;
   animation: slideDown 0.35s ease-out;
   width: 100%;
@@ -299,8 +298,8 @@ html {
   }
 
   .logo {
-    margin-top: -22px !important;
-    width: 52%;
+    margin-top: -24px !important;
+    width: 84%;
   }
 
   .m-input {
@@ -310,8 +309,8 @@ html {
 
 @media(max-width:576px) {
   .logo {
-    width: 60% !important;
-    margin-top: -17px !important;
+    width: 63% !important;
+    margin-top: -21px !important;
   }
 
   .card {
