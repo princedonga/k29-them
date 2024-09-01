@@ -18,7 +18,7 @@ html {
 }
 
 .page-header.is-sticky {
-  position: fixed;
+  position: sticky;
   box-shadow: 0 5px 16px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   animation: slideDown 0.35s ease-out;
@@ -28,14 +28,18 @@ html {
 }
 
 .logo {
-  width: 53%;
+  width: 10%;
   margin-top: -29px !important;
 }
+
 .search-bar {
   position: absolute;
-  top: -74px; /* Position it directly below the parent container */
-  right: 183px; /* Align it to the right edge of the parent container */
-  z-index: 1000; /* Ensure it appears above other elements */
+  top: -74px;
+  /* Position it directly below the parent container */
+  right: 183px;
+  /* Align it to the right edge of the parent container */
+  z-index: 1000;
+  /* Ensure it appears above other elements */
   width: 20% !important;
 }
 
@@ -58,22 +62,26 @@ html {
   cursor: pointer;
   position: relative;
 }
-.menu li a::before{
+
+.menu li a::before {
   content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background-color: #dc3545;
-    transform: scale(0);
-    transition: 0.7s;
-}
-.menu li a:hover::before{
-  transform: scale(1);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #dc3545;
+  transform: scale(0);
   transition: 0.7s;
 }
 
+.menu li a:hover::before {
+  transform: scale(1);
+  transition: 0.7s;
+}
+.icon{
+  margin-top: 51px;
+}
 .pizza-img-set {
   width: 65%;
   animation: mymove 7s infinite;
@@ -263,8 +271,12 @@ html {
   .m-input {
     width: 30% !important;
   }
-  .logo{
-    width: 40%;
+
+  .logo {
+    width: 16%;
+  }
+  .icon{
+    margin-top: 33px !important;
   }
 }
 
@@ -279,7 +291,7 @@ html {
   }
 
   .offcanvas {
-    width: 45% !important;
+    width: 50% !important;
   }
 
   .undreline1::after {
@@ -298,8 +310,9 @@ html {
   }
 
   .logo {
-    margin-top: -24px !important;
-    width: 84%;
+    margin-top: -21px !important;
+    width: 23%;
+   
   }
 
   .m-input {
@@ -309,25 +322,24 @@ html {
 
 @media(max-width:576px) {
   .logo {
-    width: 63% !important;
-    margin-top: -21px !important;
+  width: 18% !important;
+        margin-top: -8px !important;
   }
-
+  .icon{
+    margin-top: 19px !important;
+  }
   .card {
     display: block;
     margin: auto;
     margin-top: 15px;
   }
 
-  /* .undreline{
-      margin-left: 20px;
-    } */
   .m-set {
-    margin: 10px 10px !important;
+    padding: 10px 10px !important;
   }
 
   .m-set1 {
-    margin: 10px 15px !important;
+    padding: 10px 15px !important;
   }
 
   .undreline1::after {
@@ -362,8 +374,8 @@ html {
 
 @media(max-width:420px) {
   .logo {
-    margin-top: -23px !important;
-    width: 82% !important;
+    margin-top: -16px !important;
+    width: 23% !important;
   }
 
   .col-set {

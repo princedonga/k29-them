@@ -79,7 +79,7 @@ function Home() {
                     <div className='row'>
                         <div className='col-lg-3 col-md-3 col-sm-12 col-12'>
                             <div >
-                                <img src='Assets/img/pizza.jpeg' alt='right-pizza-img'className=' d-block mx-auto' ></img>
+                                <img src='Assets/img/pizza.jpeg' alt='right-pizza-img' className=' d-block mx-auto' ></img>
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-3 col-sm-12 col-12'>
@@ -346,6 +346,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+           
         </div>
     );
 }
