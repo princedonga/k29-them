@@ -28,8 +28,8 @@ html {
 }
 
 .logo {
-  width: 10%;
-  margin-top: -29px !important;
+  width: 30% !important;
+  margin-top: -12px !important;
 }
 
 .search-bar {
@@ -79,12 +79,14 @@ html {
   transform: scale(1);
   transition: 0.7s;
 }
-.icon{
+
+.icon {
   margin-top: 51px;
 }
+
 .pizza-img-set {
   width: 65%;
-  animation: mymove 7s infinite;
+  animation: mymove 25s infinite;
 }
 
 @keyframes mymove {
@@ -273,9 +275,11 @@ html {
   }
 
   .logo {
-    width: 16%;
+    width: 37% !important;
+    margin-top: -12px !important;
   }
-  .icon{
+
+  .icon {
     margin-top: 33px !important;
   }
 }
@@ -312,7 +316,7 @@ html {
   .logo {
     margin-top: -21px !important;
     width: 23%;
-   
+
   }
 
   .m-input {
@@ -322,12 +326,14 @@ html {
 
 @media(max-width:576px) {
   .logo {
-  width: 18% !important;
-        margin-top: -8px !important;
+    width: 47% !important;
+    margin-top: -10px !important;
   }
-  .icon{
+
+  .icon {
     margin-top: 19px !important;
   }
+
   .card {
     display: block;
     margin: auto;
@@ -374,8 +380,8 @@ html {
 
 @media(max-width:420px) {
   .logo {
-    margin-top: -16px !important;
-    width: 23% !important;
+    margin-top: -10px !important;
+    width: 59% !important;
   }
 
   .col-set {

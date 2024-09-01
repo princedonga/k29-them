@@ -27,7 +27,7 @@ function Header() {
                     <input type="checkbox" id="show-menu" />
                     <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
                     <div class="nav-content">
-                        <div class="logo"><img src="Assets\img\logo1.png" alt="" className='w-75 mt-2' /></div>
+                        <div class="logo"><img src="Assets\img\logo1.png" alt="" className='w-75 mt-2 logo' /></div>
                         <ul class="links mt-2">
                             <li className='nav-item'><ScrollLink className='text-danger' to="home" smooth={true} duration={50}>Home</ScrollLink></li>
                             <li className='nav-item'><ScrollLink to="shop" smooth={true} duration={50}>Shop</ScrollLink></li>
