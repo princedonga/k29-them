@@ -47,7 +47,8 @@ function Home() {
 
     return (
         <div className='overflow'>
-            <section className='mt-0 pt-5' id='home'>
+           
+            <section className='mt-0 pt-5'id='home'>
                 <div className='container m-set'>
                     <div className='row'>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>

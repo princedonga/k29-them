@@ -423,7 +423,7 @@ html {
     width: 50% !important;
   }
 
-  .undreline {
+  .line::after {
     content: "";
     position: absolute;
     top: 51%;
