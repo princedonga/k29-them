@@ -92,7 +92,7 @@ function Contact() {
                             <form onSubmit={handleSubmit}>
                                 <input 
                                     type='text' 
-                                    className={`form-control mb-5 ${errors.name && 'is-invalid'}`} 
+                                    className={`form-control  ${errors.name && 'is-invalid'}`} 
                                     placeholder='Enter Your Name:' 
                                     name='name' 
                                     value={formData.name} 
@@ -102,7 +102,7 @@ function Contact() {
                                 
                                 <input 
                                     type='email' 
-                                    className={`form-control mb-5 ${errors.email && 'is-invalid'}`} 
+                                    className={`form-control mt-5 ${errors.email && 'is-invalid'}`} 
                                     placeholder='Enter Your Email:' 
                                     name='email' 
                                     value={formData.email} 
@@ -112,7 +112,7 @@ function Contact() {
                                 
                                 <input 
                                     type='number' 
-                                    className={`form-control mb-5 ${errors.mobile && 'is-invalid'}`} 
+                                    className={`form-control mt-5 ${errors.mobile && 'is-invalid'}`} 
                                     placeholder='Mobile' 
                                     name='mobile' 
                                     value={formData.mobile} 
@@ -122,7 +122,7 @@ function Contact() {
                                 
                                 <input 
                                     type='password' 
-                                    className={`form-control mb-5 ${errors.password && 'is-invalid'}`} 
+                                    className={`form-control mt-5 ${errors.password && 'is-invalid'}`} 
                                     placeholder='Password' 
                                     name='password' 
                                     value={formData.password} 
@@ -130,7 +130,7 @@ function Contact() {
                                 />
                                 {errors.password && <div className="invalid-feedback">{errors.password}</div>}
                                 
-                                <button className='btn btn-danger px-5' type='submit'>Submit</button>
+                                <button className='btn btn-danger px-5 mt-5' type='submit'>Submit</button>
                             </form>
                         </div>
                     </div>
