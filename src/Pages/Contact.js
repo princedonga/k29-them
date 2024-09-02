@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Swal from 'sweetalert2';
+
 
 function Contact() {
     const [formData, setFormData] = useState({
@@ -48,6 +50,12 @@ function Contact() {
             axios.post('https://www.demo603.amrithaa.com/camdell/appapi/register.php', formData)
                 .then(response => {
                     console.log('Form submitted successfully:', response.data);
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Your form has been submitted successfully.',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    });
                     setFormData({
                         name: '',
                         email: '',
@@ -58,9 +66,16 @@ function Contact() {
                 })
                 .catch(error => {
                     console.error('Error submitting the form:', error);
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'There was an issue submitting your form. Please try again later.',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
                 });
         }
     };
+   
 
     return (
         <div>
@@ -72,7 +87,7 @@ function Contact() {
                         </div>
                     </div>
                     <div className='col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12'>
-                        <div className='px-5 mx-lg-5'>
+                        <div className='px-5 mx-lg-5 mt-xl-0 mt-4'>
                             <h3 className='line text-danger mb-5'>Contact Us</h3>
                             <form onSubmit={handleSubmit}>
                                 <input 
