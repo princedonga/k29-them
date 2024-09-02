@@ -42,7 +42,7 @@ function Admin() {
                                     style={{ width: '50px', height: '50px', objectFit: 'cover' }}
                                 />
                             </td>
-                            <td>{category.sequence}</td>
+                            <td className='px-4'>{category.sequence}</td>
                             <td>{new Date(category.created_date).toLocaleDateString()}</td>
                         </tr>
                     ))}
