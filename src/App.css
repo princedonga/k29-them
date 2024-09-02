@@ -462,3 +462,13 @@ html {
   position: relative;
   margin-top: -50px !important;
 }
+.list-group-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.list-group-item img {
+  margin-right: 15px;
+  border-radius: 4px;
+}
