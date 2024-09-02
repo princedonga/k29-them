@@ -324,7 +324,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            {/* <section data-aos="fade-" data-aos-duration="2000">
+            <section data-aos="fade-" data-aos-duration="2000">
                 <div className='container mt-5'>
                     <div className='row m-set'>
                         <div className='col-lg-12 col-md-12 col-sm-12 col-12'>
@@ -342,7 +342,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section> */}
+            </section>
            
         </div>
     );
