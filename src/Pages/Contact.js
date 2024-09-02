@@ -78,7 +78,7 @@ function Contact() {
    
 
     return (
-        <div>
+        <div id='home'>
             <section className='container pt-5'>
                 <div className='row'>
                     <div className='col-xl-6 col-lg-12 col-md-12 col-sm-12 col-12'>
