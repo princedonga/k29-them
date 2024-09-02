@@ -23,7 +23,7 @@ function Home() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-        setErrors({ ...errors, [name]: '' }); 
+        setErrors({ ...errors, [name]: '' }); // Clear error when user types
     };
 
     const handleSubmit = (e) => {
@@ -41,12 +41,12 @@ function Home() {
             setErrors(validationErrors);
         } else {
             setErrors({});
-            
+            // Form submission logic here
         }
     };
 
     return (
-        <div>
+        <div className='overflow'>
             <section className='mt-0 pt-5' id='home'>
                 <div className='container m-set'>
                     <div className='row'>
@@ -63,7 +63,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-zoom" data-aos-duration="3000" className='mt-3'>
+                            <div data-aos="fade-left" data-aos-duration="3000" className='mt-3'>
                                 <img src='Assets/img/product_4.2.jpg' alt='pizza-img' className='pizza-img-set float-lg-end d-block mx-auto mt-lg-0 mt-5'></img>
                             </div>
                         </div>
@@ -98,7 +98,7 @@ function Home() {
                 </div>
                 <div className='container mt-5 m-set' id="shop">
                     <div>
-                        <h3 className='text-danger underline'>Popular Dishes</h3>
+                        <h3 className='text-danger line'>Popular Dishes</h3>
                         <h3>Browse Menu</h3>
                     </div>
                 </div>
@@ -117,8 +117,8 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div className='mt-5 m-set1' data-aos="fade-up" data-aos-duration="1400">
-                                <h3 className='text-danger underline'>Our Story</h3>
+                            <div className='mt-5 m-set1' data-aos="fade-left" data-aos-duration="1400">
+                                <h3 className='text-danger line'>Our Story</h3>
                                 <h2>The Pizza has Excellent<br /> Quality Food</h2>
                                 <p className='mt-2'>
                                     Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
@@ -138,7 +138,7 @@ function Home() {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div>
-                                <h3 className='text-danger underline'>Our Strength</h3>
+                                <h3 className='text-danger line'>Our Strength</h3>
                                 <h2>Why We are the Best?</h2>
                             </div>
                         </div>
@@ -183,7 +183,7 @@ function Home() {
                     <div className='row'>
                         <div className='col-lg-12'>
                             <div>
-                                <h3 className='text-danger underline'>Reservation</h3>
+                                <h3 className='text-danger line'>Reservation</h3>
                                 <h2>Book Your Table Now!</h2>
                             </div>
                         </div>
@@ -269,7 +269,7 @@ function Home() {
                             </form>
                         </div>
                         <div className='col-lg-5 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-down" data-aos-duration="1400">
+                            <div data-aos="fade-left" data-aos-duration="1400">
                                 <img src='Assets/img/product_4.2.jpg' alt='reservation-img' className='w-100' />
                             </div>
                         </div>
@@ -324,7 +324,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section data-aos="fade-" data-aos-duration="2000">
+            <section data-aos="fade-right" data-aos-duration="2000">
                 <div className='container mt-5'>
                     <div className='row m-set'>
                         <div className='col-lg-12 col-md-12 col-sm-12 col-12'>

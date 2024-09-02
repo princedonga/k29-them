@@ -1,10 +1,12 @@
 html {
   scroll-behavior: smooth;
+  
 }
 
 * {
   font-family: "Poppins", sans-serif;
   font-style: normal;
+  
 }
 
 @keyframes slideDown {
@@ -15,6 +17,9 @@ html {
   to {
     transform: translateY(0);
   }
+}
+.overflow{
+  overflow: hidden;
 }
 
 .page-header.is-sticky {
@@ -95,11 +100,11 @@ html {
   }
 }
 
-.undreline {
+.line{
   position: relative;
 }
 
-.undreline::after {
+.line::after{
   content: "";
   position: absolute;
   top: 51%;
@@ -322,7 +327,8 @@ html {
   .m-input {
     width: 40% !important;
   }
-  .loader{
+
+  .loader {
     margin: auto !important;
     display: block !important;
   }
@@ -380,6 +386,7 @@ html {
   .m-input {
     width: 60% !important;
   }
+
   /* .pizza-img-set {
     width: 65% !important;
    
