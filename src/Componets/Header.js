@@ -21,14 +21,14 @@ function Header() {
     }, []);
     return (
         <div className={`page-header ${isSticky ? 'is-sticky' : ''}`}>
-            <div class="wrapper py-3">
+            <div className="wrapper py-3">
                 <nav>
                     <input type="checkbox" id="show-search" />
                     <input type="checkbox" id="show-menu" />
-                    <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
-                    <div class="nav-content">
-                        <div class="logo"><img src="Assets\img\logo1.png" alt="" className='w-75 mt-2 logo' /></div>
-                        <ul class="links mt-2">
+                    <label for="show-menu" className="menu-icon"><i className="fas fa-bars"></i></label>
+                    <div className="nav-content">
+                        <div className="logo"><img src="Assets\img\logo1.png" alt="" className='w-75 mt-2 logo' /></div>
+                        <ul className="links mt-2">
                             <li className='nav-item'><ScrollLink className='text-danger' to="home" smooth={true} duration={50}>Home</ScrollLink></li>
                             <li className='nav-item'><ScrollLink to="shop" smooth={true} duration={50}>Shop</ScrollLink></li>
                             <li className='nav-item'><ScrollLink to="">Pages</ScrollLink></li>
@@ -36,11 +36,11 @@ function Header() {
                             <li className='nav-item'><ScrollLink to="">Contact</ScrollLink></li>
                         </ul>
                     </div>
-                    <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-                    <i class="fa-solid fa-cart-shopping fs-5 ms-1"></i>
-                    <form action="#" class="search-box">
+                    <label for="show-search" className="search-icon"><i className="fas fa-search"></i></label>
+                    <i className="fa-solid fa-cart-shopping fs-5 ms-1 me-3"></i>
+                    <form action="" className="search-box">
                         <input type="text" placeholder="Search Something..." required />
-                        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+                        <button type="submit" className="go-icon"><i className="fas fa-long-arrow-alt-right"></i></button>
                     </form>
                 </nav>
             </div>
