@@ -79,7 +79,7 @@ nav .nav-content .links {
   line-height: 70px;
   width: 70px;
   text-align: center;
-  padding-left: 24px;
+  /* padding-left: 24px; */
 }
 
 .wrapper .menu-icon {
@@ -88,6 +88,7 @@ nav .nav-content .links {
 
 .wrapper #show-search:checked~.search-icon i::before {
   content: "\f00d";
+  margin-left: 48px;
 }
 
 .wrapper .search-box {

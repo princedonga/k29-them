@@ -85,6 +85,7 @@ function Footer() {
                     </div>
                 </div>
             </footer>
+            
             <section>
                 <h6 className='text-center py-3'>2024 Pizzon All Right Resrved By <span className='text-danger'>Templatetscoder</span></h6>
             </section>

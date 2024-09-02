@@ -23,7 +23,7 @@ function Home() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-        setErrors({ ...errors, [name]: '' }); // Clear error when user types
+        setErrors({ ...errors, [name]: '' }); 
     };
 
     const handleSubmit = (e) => {
@@ -41,7 +41,6 @@ function Home() {
             setErrors(validationErrors);
         } else {
             setErrors({});
-            // Form submission logic here
         }
     };
 
@@ -277,9 +276,9 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section className='' id='Blog'>
 
-            </section>
+            <section className='' id='Blog'></section>
+
             <section data-aos="fade-up" data-aos-duration="2000" >
                 <div className='container mt-5'>
                     <div className='row m-set'>
@@ -325,6 +324,7 @@ function Home() {
                     </div>
                 </div>
             </section>
+            
             <section data-aos="fade-right" data-aos-duration="2000">
                 <div className='container mt-5'>
                     <div className='row m-set'>
