@@ -47,9 +47,6 @@ function Home() {
 
     return (
         <div>
-            <section >
-
-            </section>
             <section className='mt-0 pt-5' id='home'>
                 <div className='container m-set'>
                     <div className='row'>
@@ -77,12 +74,12 @@ function Home() {
             <section className='mt-5' data-aos="fade-up" data-aos-duration="1200">
                 <div className='container m-set'>
                     <div className='row'>
-                        <div className='col-lg-3 col-md-3 col-sm-12 col-12'>
+                        <div className='col-lg-3 col-md-4 col-sm-12 col-12'>
                             <div >
                                 <img src='Assets/img/pizza.jpeg' alt='right-pizza-img' className=' d-block mx-auto' ></img>
                             </div>
                         </div>
-                        <div className='col-lg-6 col-md-3 col-sm-12 col-12'>
+                        <div className='col-lg-6 col-md-4 col-sm-12 col-12'>
                             <div className='m-set1'>
                                 <h2>Daily fresh And <br />always tasty</h2>
                                 <p>
@@ -92,7 +89,7 @@ function Home() {
                                 </p>
                             </div>
                         </div>
-                        <div className='col-lg-3 col-md-3 col-sm-12 col-12'>
+                        <div className='col-lg-3 col-md-4 col-sm-12 col-12'>
                             <div>
                                 <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfajagZzkr-SlOTWRvYslgrxQiAjDCWvVR_w&s' className='d-block mx-auto' alt='garlic'></img>
                             </div>
@@ -120,7 +117,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div className='mt-5 m-set1' data-aos="fade-left" data-aos-duration="1400">
+                            <div className='mt-5 m-set1' data-aos="fade-up" data-aos-duration="1400">
                                 <h3 className='text-danger underline'>Our Story</h3>
                                 <h2>The Pizza has Excellent<br /> Quality Food</h2>
                                 <p className='mt-2'>
@@ -272,7 +269,7 @@ function Home() {
                             </form>
                         </div>
                         <div className='col-lg-5 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-left" data-aos-duration="1400">
+                            <div data-aos="fade-down" data-aos-duration="1400">
                                 <img src='Assets/img/product_4.2.jpg' alt='reservation-img' className='w-100' />
                             </div>
                         </div>
