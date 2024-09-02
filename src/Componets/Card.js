@@ -65,11 +65,13 @@ function Card() {
                         <div className="card-body">
                             <h5 className="card-title text-center">john doe  </h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
+                            <div className='text-center'>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -79,11 +81,13 @@ function Card() {
                         <div className="card-body">
                             <h5 className="card-title text-center">john doe  </h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
+                            <div className='text-center'>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -93,11 +97,13 @@ function Card() {
                         <div className="card-body">
                             <h5 className="card-title text-center">john doe  </h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
+                            <div className='text-center'>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,11 +113,13 @@ function Card() {
                         <div className="card-body">
                             <h5 className="card-title text-center">john doe  </h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
+                            <div className='text-center'>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -121,11 +129,13 @@ function Card() {
                         <div className="card-body">
                             <h5 className="card-title text-center">john doe  </h5>
                             <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
-                            <span><i className="fa-solid fa-star text-danger"></i></span>
+                            <div className='text-center'>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                                <span><i className="fa-solid fa-star text-danger"></i></span>
+                            </div>
                         </div>
                     </div>
                 </div>
