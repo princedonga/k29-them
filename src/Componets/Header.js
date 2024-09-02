@@ -20,8 +20,8 @@ function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     return (
-        <div className={`page-header    ${isSticky ? 'is-sticky' : ''}`}>
-            <div class="wrapper">
+        <div className={`page-header ${isSticky ? 'is-sticky' : ''}`}>
+            <div class="wrapper py-3">
                 <nav>
                     <input type="checkbox" id="show-search" />
                     <input type="checkbox" id="show-menu" />
