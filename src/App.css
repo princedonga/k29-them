@@ -322,6 +322,10 @@ html {
   .m-input {
     width: 40% !important;
   }
+  .loader{
+    margin: auto !important;
+    display: block !important;
+  }
 }
 
 @media(max-width:576px) {
@@ -341,7 +345,7 @@ html {
   }
 
   .m-set {
-    padding: 10px 10px !important;
+    padding: 10px 28px !important;
   }
 
   .m-set1 {
@@ -376,6 +380,10 @@ html {
   .m-input {
     width: 60% !important;
   }
+  /* .pizza-img-set {
+    width: 65% !important;
+   
+  } */
 }
 
 @media(max-width:420px) {

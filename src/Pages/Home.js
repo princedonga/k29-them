@@ -23,7 +23,7 @@ function Home() {
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
-        setErrors({ ...errors, [name]: '' }); // Clear error when user types
+        setErrors({ ...errors, [name]: '' }); 
     };
 
     const handleSubmit = (e) => {
@@ -41,7 +41,7 @@ function Home() {
             setErrors(validationErrors);
         } else {
             setErrors({});
-            // Form submission logic here
+            
         }
     };
 
@@ -63,7 +63,7 @@ function Home() {
                             </div>
                         </div>
                         <div className='col-lg-6 col-md-6 col-sm-12 col-12'>
-                            <div data-aos="fade-left" data-aos-duration="3000" className='mt-3'>
+                            <div data-aos="fade-zoom" data-aos-duration="3000" className='mt-3'>
                                 <img src='Assets/img/product_4.2.jpg' alt='pizza-img' className='pizza-img-set float-lg-end d-block mx-auto mt-lg-0 mt-5'></img>
                             </div>
                         </div>
@@ -324,7 +324,7 @@ function Home() {
                     </div>
                 </div>
             </section>
-            <section data-aos="fade-right" data-aos-duration="2000">
+            {/* <section data-aos="fade-" data-aos-duration="2000">
                 <div className='container mt-5'>
                     <div className='row m-set'>
                         <div className='col-lg-12 col-md-12 col-sm-12 col-12'>
@@ -342,7 +342,7 @@ function Home() {
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> */}
            
         </div>
     );

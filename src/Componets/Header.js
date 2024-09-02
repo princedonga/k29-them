@@ -37,7 +37,7 @@ function Header() {
                         </ul>
                     </div>
                     <label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
-                    <i class="fa-solid fa-cart-shopping fs-5"></i>
+                    <i class="fa-solid fa-cart-shopping fs-5 ms-1"></i>
                     <form action="#" class="search-box">
                         <input type="text" placeholder="Search Something..." required />
                         <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
