@@ -4,6 +4,7 @@ import Footer from './Componets/Footer';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home';
 import Preloader from './Componets/Preloader';
+import Contact from './Pages/Contact';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -26,6 +27,7 @@ function App() {
           <Header />
           <Routes>
             <Route path='/' element={<Home />} />
+            <Route path='/contact' element={<Contact></Contact>}></Route>
           </Routes>
           <Footer />
         </>

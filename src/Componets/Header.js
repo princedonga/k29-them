@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link as ScrollLink } from 'react-scroll';
 import '../App.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
 
@@ -29,11 +30,13 @@ function Header() {
                     <div className="nav-content">
                         <div className="logo"><img src="Assets\img\logo1.png" alt="" className='w-75 mt-2 logo' /></div>
                         <ul className="links mt-2">
-                            <li className='nav-item'><ScrollLink className='text-danger' to="home" smooth={true} duration={50}>Home</ScrollLink></li>
-                            <li className='nav-item'><ScrollLink to="shop" smooth={true} duration={50}>Shop</ScrollLink></li>
-                            <li className='nav-item'><ScrollLink to="">Pages</ScrollLink></li>
-                            <li className='nav-item'><ScrollLink to="Blog" smooth={true} duration={50}>Blog</ScrollLink></li>
-                            <li className='nav-item'><ScrollLink to="">Contact</ScrollLink></li>
+                            <li className='nav-item'><ScrollLink to="home" smooth={true} duration={50}><Link to="/" className='text-danger '>Home</Link></ScrollLink>
+                            </li>
+                            <li className='nav-item'><ScrollLink to="shop" smooth={true} duration={50}>
+                                <Link to="">Shop</Link></ScrollLink></li>
+                            <li className='nav-item'><ScrollLink to=""><Link to="">Pages</Link></ScrollLink></li>
+                            <li className='nav-item'><ScrollLink to="Blog" smooth={true} duration={50}><Link to="">Blog</Link></ScrollLink></li>
+                            <li className='nav-item'><ScrollLink><Link to="/contact">Contact</Link></ScrollLink></li>
                         </ul>
                     </div>
                     <label for="show-search" className="search-icon"><i className="fas fa-search"></i></label>

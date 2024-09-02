@@ -54,10 +54,10 @@ nav .nav-content .links {
   color: #000;
   font-size: 18px;
   font-weight: 500;
-  padding: 7px 14px;
+  padding: 7px 7px;
   border-radius: 5px;
   transition: all 0.3s ease;
-  margin: 0 5px;
+  margin: 0 3px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -253,7 +253,7 @@ nav .nav-content .links {
     line-height: 20px;
     font-size: 17px;
     display: block;
-    padding: 8px 18px;
+    padding: 8px 9px;
     cursor: pointer;
     color: #fff;
   }
