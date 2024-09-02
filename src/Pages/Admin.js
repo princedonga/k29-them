@@ -20,15 +20,34 @@ function Admin() {
         fetchData();
     }, []);
     return (
-        <div className="container">
-            <ul className="list-group">
-                {categories.map(category => (
-                    <li className="list-group-item d-flex align-items-center" key={category.id}>
-                        <img src={`https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`} alt={category.name} className="me-3" style={{ width: '50px', height: '50px', objectFit: 'cover' }} />
-                        <span>{category.name}</span>
-                    </li>
-                ))}
-            </ul>
+        <div className="container" id='home'>
+            <h2 className="my-4">Category List</h2>
+            <table className="table table-striped table-dark table-responsive-sm">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Image</th>
+                        <th>Sequence</th>
+                        <th>Created Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {categories.map(category => (
+                        <tr key={category.id}>
+                            <td>{category.name}</td>
+                            <td>
+                                <img
+                                    src={`https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`}
+                                    alt={category.name}
+                                    style={{ width: '50px', height: '50px', objectFit: 'cover' }}
+                                />
+                            </td>
+                            <td>{category.sequence}</td>
+                            <td>{new Date(category.created_date).toLocaleDateString()}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
         </div>
     )
 }

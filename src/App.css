@@ -472,3 +472,6 @@ html {
   margin-right: 15px;
   border-radius: 4px;
 }
+.table img {
+  border-radius: 4px;
+}
