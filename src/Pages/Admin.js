@@ -22,7 +22,7 @@ function Admin() {
     return (
         <div className="container" id='home'>
             <h2 className="my-4">Category List</h2>
-            <table className="table table-striped table-dark table-responsive-sm">
+            <table className="table table-striped table-dark table-responsive-sm table-hover">
                 <thead>
                     <tr>
                         <th>Name</th>
