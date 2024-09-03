@@ -7,6 +7,7 @@ import Preloader from './Componets/Preloader';
 import Contact from './Pages/Contact';
 import Admin from './Pages/Admin';
 
+
 function App() {
   const [loading, setLoading] = useState(true);
 
@@ -29,7 +30,7 @@ function App() {
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contact></Contact>}></Route>
-            <Route path='/admin' element={<Admin></Admin>}></Route>
+            <Route path='/product' element={<Admin></Admin>}></Route>
           </Routes>
           <Footer />
         </>
