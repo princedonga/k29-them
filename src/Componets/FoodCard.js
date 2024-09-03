@@ -107,7 +107,7 @@ function FoodCard() {
                         </div>
                     </div>
                     <div className='col-lg-3'>
-                        <div className="card mt-md-2 mt-lg-0" style={{ width: "18rem" }} data-aos="zoom-in" data-aos-duration="1400">
+                        <div className="card mt-md-2 mt-lg-5" style={{ width: "18rem" }} data-aos="zoom-in" data-aos-duration="1400">
                             <img src="Assets/img/sandwich.jpeg" className="card-img-top w-100 px-1 d-block mx-auto pt-3" alt="card-img" />
                             <div className="card-body">
                                 <h5 className="card-title">Sandwich Soup <span className='float-end text-danger'> ₹100</span></h5>

@@ -47,32 +47,59 @@ function Admin() {
         try {
             const formData = new FormData();
             formData.append('name', editedName);
+    
             if (image) {
-                formData.append('image', image); // Pass the file object directly
+                const reader = new FileReader();
+                reader.readAsDataURL(image);
+                reader.onloadend = async () => {
+                    const base64String = reader.result.split(',')[1]; // Remove the data:image/jpeg;base64, part
+                    formData.append('base64', base64String);
+    
+                    // Send the API request with the Base64 image
+                    const response = await axios.post('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', formData);
+    
+                    // Log the response to debug
+                    console.log('API Response:', response);
+    
+                    // Update categories state
+                    const updatedCategories = categories.map(category =>
+                        category.id === selectedCategory.id
+                            ? { ...category, name: editedName, icon: image.name } 
+                            : category
+                    );
+                    setCategories(updatedCategories);
+                    setEditModalShow(false);
+                    console.log('Updated Categories:', updatedCategories);
+                };
+            } else {
+                // If no image, still proceed with the update
+                const response = await axios.post('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', formData);
+                console.log('API Response:', response);
+    
+                // Update categories state
+                const updatedCategories = categories.map(category =>
+                    category.id === selectedCategory.id
+                        ? { ...category, name: editedName } 
+                        : category
+                );
+                setCategories(updatedCategories);
+                setEditModalShow(false);
+                console.log('Updated Categories:', updatedCategories);
             }
-
-            // Assuming you have an API endpoint to update the category
-            await axios.post('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', formData);
-
-            // Update categories state
-            const updatedCategories = categories.map(category =>
-                category.id === selectedCategory.id
-                    ? { ...category, name: editedName, icon: image.name } // Assuming image.name is used for the icon name
-                    : category
-            );
-            setCategories(updatedCategories);
-            setEditModalShow(false);
-            console.log("successfully upload");
             
         } catch (error) {
             console.error('Error updating category:', error);
         }
     };
+    
+    
+
+
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
         if (file) {
-            setImage(file); // Store the file object
+            setImage(file);
         }
     };
 
