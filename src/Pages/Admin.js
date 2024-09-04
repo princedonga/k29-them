@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
 import { Modal, Button, Form } from 'react-bootstrap';
 
 function Admin() {
@@ -8,7 +7,8 @@ function Admin() {
     const [deleteModalShow, setDeleteModalShow] = useState(false);
     const [selectedCategory, setSelectedCategory] = useState(null);
     const [editedName, setEditedName] = useState('');
-    const [image, setImage] = useState(null); // Use null instead of '' for file object
+    const [image, setImage] = useState(null);
+    const [newImageUrl, setNewImageUrl] = useState('');
 
     useEffect(() => {
         const fetchData = async () => {
@@ -38,69 +38,74 @@ function Admin() {
     };
 
     const handleDeleteConfirm = () => {
-        // Remove item from frontend
         setCategories(categories.filter(category => category.id !== selectedCategory.id));
         setDeleteModalShow(false);
     };
 
     const handleEditConfirm = async () => {
         try {
-            const formData = new FormData();
-            formData.append('name', editedName);
-    
+            let updatedCategory = {
+                name: editedName,
+                icon: selectedCategory.icon
+            };
+
             if (image) {
-                const reader = new FileReader();
-                reader.readAsDataURL(image);
-                reader.onloadend = async () => {
-                    const base64String = reader.result.split(',')[1]; // Remove the data:image/jpeg;base64, part
-                    formData.append('base64', base64String);
-    
-                    // Send the API request with the Base64 image
-                    const response = await axios.post('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', formData);
-    
-                    // Log the response to debug
-                    console.log('API Response:', response);
-    
-                    // Update categories state
-                    const updatedCategories = categories.map(category =>
-                        category.id === selectedCategory.id
-                            ? { ...category, name: editedName, icon: image.name } 
-                            : category
-                    );
-                    setCategories(updatedCategories);
-                    setEditModalShow(false);
-                    console.log('Updated Categories:', updatedCategories);
-                };
-            } else {
-                // If no image, still proceed with the update
-                const response = await axios.post('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', formData);
-                console.log('API Response:', response);
-    
-                // Update categories state
-                const updatedCategories = categories.map(category =>
-                    category.id === selectedCategory.id
-                        ? { ...category, name: editedName } 
-                        : category
-                );
-                setCategories(updatedCategories);
-                setEditModalShow(false);
-                console.log('Updated Categories:', updatedCategories);
+                const response = await fetch('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: "application/json",
+                        "Access-Control-Allow-Origin": "*",
+                    },
+                    body: JSON.stringify({
+                        base64: image
+                    })
+                });
+
+                const data = await response.json();
+                console.log(data);
+
+                if (data.success) {
+
+                    const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
+
+                    updatedCategory.icon = imageUrl;
+                    
+                    setNewImageUrl(imageUrl);
+                } else {
+                    console.error('Image upload failed:', data.message);
+                }
             }
-            
+
+            const updatedCategories = categories.map(category =>
+                category.id === selectedCategory.id ? { ...category, ...updatedCategory } : category
+            );
+
+            setCategories(updatedCategories);
+
+            setEditModalShow(false);
+
+            setImage(null);
+
         } catch (error) {
-            console.error('Error updating category:', error);
+            console.error('Error processing request:', error);
         }
     };
-    
-    
-
-
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
-        if (file) {
-            setImage(file);
-        }
+
+        const reader = new FileReader();
+
+        reader.readAsDataURL(file);
+
+        reader.onload = () => {
+            setImage(reader.result);
+        };
+
+        reader.onerror = (error) => {
+            console.log(error);
+        };
     };
 
     return (
@@ -122,11 +127,19 @@ function Admin() {
                             <tr key={category.id}>
                                 <td>{category.name}</td>
                                 <td>
-                                    <img
-                                        src={`https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`}
-                                        alt={category.name}
-                                        style={{ width: '50px', height: '50px', objectFit: 'cover' }}
-                                    />
+                                    {selectedCategory && selectedCategory.id === category.id && newImageUrl ? (
+                                        <img
+                                            src={newImageUrl}
+                                            alt={category.name}
+                                            style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                                        />
+                                    ) : (
+                                        <img
+                                            src={`https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`}
+                                            alt={category.name}
+                                            style={{ width: '60px', height: '60px', objectFit: 'cover' }}
+                                        />
+                                    )}
                                 </td>
                                 <td className='px-4'>{category.sequence}</td>
                                 <td>{new Date(category.created_date).toLocaleDateString()}</td>
@@ -153,7 +166,6 @@ function Admin() {
                 </table>
             </div>
 
-            {/* Edit Modal */}
             <Modal show={editModalShow} onHide={() => setEditModalShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Edit Category</Modal.Title>
@@ -175,6 +187,7 @@ function Admin() {
                                 accept="image/*"
                                 onChange={handleImageChange}
                             />
+
                         </Form.Group>
                     </Form>
                 </Modal.Body>
@@ -188,7 +201,6 @@ function Admin() {
                 </Modal.Footer>
             </Modal>
 
-            {/* Delete Confirmation Modal */}
             <Modal show={deleteModalShow} onHide={() => setDeleteModalShow(false)}>
                 <Modal.Header closeButton>
                     <Modal.Title>Confirm Deletion</Modal.Title>

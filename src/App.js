@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import Preloader from './Componets/Preloader';
 import Contact from './Pages/Contact';
 import Admin from './Pages/Admin';
+import Upload from './Pages/Upload';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='/contact' element={<Contact></Contact>}></Route>
             <Route path='/product' element={<Admin></Admin>}></Route>
+            <Route path='/upload' element={<Upload></Upload>}></Route>
           </Routes>
           <Footer />
         </>

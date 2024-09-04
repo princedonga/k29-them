@@ -26,7 +26,7 @@ function Header() {
                 <nav>
                     <input type="checkbox" id="show-search" />
                     <input type="checkbox" id="show-menu" />
-                    <label for="show-menu" className="menu-icon"><i className="fas fa-bars"></i></label>
+                    <label htmlFor="show-menu" className="menu-icon"><i className="fas fa-bars"></i></label>
                     <div className="nav-content">
                         <div className="logo"><img src="Assets\img\logo1.png" alt="" className=' logo' /></div>
                         <ul className="links mt-2">
@@ -39,7 +39,7 @@ function Header() {
                             <li className='nav-item'><ScrollLink><Link to="/contact">Contact</Link></ScrollLink></li>
                         </ul>
                     </div>
-                    <label for="show-search" className="search-icon"><i className="fas fa-search"></i></label>
+                    <label htmlFor="show-search" className="search-icon"><i className="fas fa-search"></i></label>
                     <i className="fa-solid fa-cart-shopping fs-5 ms-1 me-3"></i>
                     <form action="" className="search-box">
                         <input type="text" placeholder="Search Something..." required />
