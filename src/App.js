@@ -7,6 +7,7 @@ import Preloader from './Componets/Preloader';
 import Contact from './Pages/Contact';
 import Admin from './Pages/Admin';
 import Upload from './Pages/Upload';
+import EditCategory from './Pages/EditCategory';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
             <Route path='/contact' element={<Contact></Contact>}></Route>
             <Route path='/product' element={<Admin></Admin>}></Route>
             <Route path='/upload' element={<Upload></Upload>}></Route>
+            <Route path="/edit/:id" element={<EditCategory />} />
           </Routes>
           <Footer />
         </>

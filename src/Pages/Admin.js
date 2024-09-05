@@ -46,9 +46,9 @@ function Admin() {
         try {
             let updatedCategory = {
                 name: editedName,
-                icon: selectedCategory.icon
+                icon: selectedCategory.icon // Default to existing icon
             };
-
+    
             if (image) {
                 const response = await fetch('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', {
                     method: "POST",
@@ -61,36 +61,34 @@ function Admin() {
                         base64: image
                     })
                 });
-
+    
                 const data = await response.json();
                 console.log(data);
-
+    
                 if (data.success) {
-
                     const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
-
-                    updatedCategory.icon = imageUrl;
-                    
-                    setNewImageUrl(imageUrl);
+                    // Update only the icon for the selected category
+                    // updatedCategory.icon = imageUrl;
+                    setNewImageUrl(imageUrl)
                 } else {
                     console.error('Image upload failed:', data.message);
                 }
             }
-
+    
             const updatedCategories = categories.map(category =>
                 category.id === selectedCategory.id ? { ...category, ...updatedCategory } : category
             );
-
+    
             setCategories(updatedCategories);
-
             setEditModalShow(false);
-
             setImage(null);
-
+    
         } catch (error) {
             console.error('Error processing request:', error);
         }
     };
+    
+    
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
