@@ -9,6 +9,7 @@ function Admin() {
     const [editedName, setEditedName] = useState('');
     const [image, setImage] = useState(null);
     const [newImageUrl, setNewImageUrl] = useState('');
+    // const index = 0; 
 
     useEffect(() => {
         const fetchData = async () => {
@@ -44,10 +45,6 @@ function Admin() {
 
     const handleEditConfirm = async () => {
         try {
-            let updatedCategory = {
-                name: editedName,
-                icon: selectedCategory.icon // Default to existing icon
-            };
     
             if (image) {
                 const response = await fetch('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', {
@@ -67,19 +64,20 @@ function Admin() {
     
                 if (data.success) {
                     const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
-                    // Update only the icon for the selected category
                     // updatedCategory.icon = imageUrl;
+                    // updatedCategories[index].icon = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
+
                     setNewImageUrl(imageUrl)
                 } else {
                     console.error('Image upload failed:', data.message);
                 }
             }
     
-            const updatedCategories = categories.map(category =>
-                category.id === selectedCategory.id ? { ...category, ...updatedCategory } : category
-            );
+            // const updatedCategories = categories.map(category =>
+            //     category.id === selectedCategory.id ? { ...category, ...updatedCategory } : category
+            // );
     
-            setCategories(updatedCategories);
+            // setCategories(updatedCategories);
             setEditModalShow(false);
             setImage(null);
     
