@@ -9,6 +9,7 @@ function Admin() {
     const [editedName, setEditedName] = useState('');
     const [image, setImage] = useState(null);
     const [newImageUrl, setNewImageUrl] = useState('');
+    const [newImageUrls, setNewImageUrls] = useState({});
     // const index = 0; 
 
     useEffect(() => {
@@ -31,6 +32,7 @@ function Admin() {
         setSelectedCategory(category);
         setEditedName(category.name);
         setEditModalShow(true);
+        setNewImageUrl(newImageUrls[category.id] || ''); // Use the stored image URL
     };
 
     const handleDelete = (category) => {
@@ -45,7 +47,7 @@ function Admin() {
 
     const handleEditConfirm = async () => {
         try {
-    
+
             if (image) {
                 const response = await fetch('https://www.demo603.amrithaa.com/camdell/appapi/uploadimage.php', {
                     method: "POST",
@@ -58,35 +60,31 @@ function Admin() {
                         base64: image
                     })
                 });
-    
+
                 const data = await response.json();
                 console.log(data);
-    
-                if (data.success) {
-                    const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
-                    // updatedCategory.icon = imageUrl;
-                    // updatedCategories[index].icon = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
 
-                    setNewImageUrl(imageUrl)
+                if (data.success) {
+                    // const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
+                    // // updatedCategory.icon = imageUrl;
+                    // // updatedCategories[index].icon = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
+
+                    const imageUrl = `https://www.demo603.amrithaa.com/camdell/public/${data.data}`;
+                    setNewImageUrls({ ...newImageUrls, [selectedCategory.id]: imageUrl });
                 } else {
                     console.error('Image upload failed:', data.message);
                 }
             }
-    
-            // const updatedCategories = categories.map(category =>
-            //     category.id === selectedCategory.id ? { ...category, ...updatedCategory } : category
-            // );
-    
-            // setCategories(updatedCategories);
+
             setEditModalShow(false);
             setImage(null);
-    
+
         } catch (error) {
             console.error('Error processing request:', error);
         }
     };
-    
-    
+
+
 
     const handleImageChange = (e) => {
         const file = e.target.files[0];
@@ -123,19 +121,10 @@ function Admin() {
                             <tr key={category.id}>
                                 <td>{category.name}</td>
                                 <td>
-                                    {selectedCategory && selectedCategory.id === category.id && newImageUrl ? (
-                                        <img
-                                            src={newImageUrl}
-                                            alt={category.name}
-                                            style={{ width: '60px', height: '60px', objectFit: 'cover' }}
-                                        />
-                                    ) : (
-                                        <img
-                                            src={`https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`}
-                                            alt={category.name}
-                                            style={{ width: '60px', height: '60px', objectFit: 'cover' }}
-                                        />
-                                    )}
+                                    <img
+                                        src={newImageUrls[category.id] || `https://www.demo603.amrithaa.com/camdell/public/images/${category.icon}`}
+                                    // ... other attributes
+                                    style={{ width: '60px', height: '60px', objectFit: 'cover' }} alt='' />
                                 </td>
                                 <td className='px-4'>{category.sequence}</td>
                                 <td>{new Date(category.created_date).toLocaleDateString()}</td>
@@ -143,7 +132,7 @@ function Admin() {
                                     <Button
                                         variant="warning"
                                         size="sm"
-                                        className="mx-2"
+                                        className="mx-2 px-3"
                                         onClick={() => handleEdit(category)}
                                     >
                                         Edit
